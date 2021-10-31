@@ -1,8 +1,10 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
+import useAuth from '../../useFirebase/useAuth';
 import './Spachial.css';
 
 const Spachial = (props) => {
+    const {_id} = useAuth();
     console.log(props.service);
     const {name, price, picture} = props.service;
     return (
@@ -11,9 +13,9 @@ const Spachial = (props) => {
            <img src={picture} alt="" />
             <h4>name: {name}</h4>
             <p>price: {price}</p>
-           <NavLink to="/order">
-           <button className="btn btn-primary">BOOK NOW</button>
-           </NavLink>
+            <Link to={`/order/${_id}`}>
+              <button className="btn btn-warning">BOOK NOW</button>
+          </Link>
             <div>
             </div>
            </div>

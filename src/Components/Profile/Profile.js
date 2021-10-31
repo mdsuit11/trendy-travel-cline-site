@@ -16,8 +16,10 @@ const Profile = () => {
     }
 
         const handleGoogleSignUp = () => {
-            SignInGoogle();
+            SignInGoogle()
+            
             histry.push(uri)
+            
         }
     return (
         <div className="login-container rgs-from">

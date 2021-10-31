@@ -38,6 +38,9 @@ function App() {
          <Route path="/courses">
           <Courses></Courses>
          </Route>
+         <Route path="/courses/:id">
+          <Courses></Courses>
+         </Route>
          <Route path="/profile">
            <Profile></Profile>
          </Route>
