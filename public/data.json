@@ -1,0 +1,44 @@
+[
+    {
+        "_id":"615aa130d188c0198ec521c2",
+        "index":0,
+        "price":"$3,019.53",
+        "picture":"https://images.pexels.com/photos/2070485/pexels-photo-2070485.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "name":"Grand Sahara Desert"
+    },
+    {
+        "_id":"615aa1308538f9baf0d099ab",
+        "index":1,
+        "price":"$3,627.15",
+        "picture":"https://images.pexels.com/photos/236525/pexels-photo-236525.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+        "name":"Hot Baloon Special Journey"
+    },
+    {
+        "_id":"615aa1301184bc50959296ab",
+        "index":2,
+        "price":"$1,141.43",
+        "picture":"https://images.pexels.com/photos/3593923/pexels-photo-3593923.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "name":"Palm Tree Beach"
+    },
+    {
+        "_id":"615aa130774b55fb8deef93d",
+        "index":3,
+        "price":"$1,178.18",
+        "picture":"https://images.pexels.com/photos/2780309/pexels-photo-2780309.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "name":"Peek Mountain View"
+    },
+    {
+        "_id":"615aa1307760ff4156f97780",
+        "index":4,
+        "price":"$2,477.13",
+        "picture":"https://images.pexels.com/photos/7171810/pexels-photo-7171810.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+        "name":"Sal Panio Estate"
+    },
+    {
+        "_id":"615aa34bf5e5ec1e124cf7fc",
+        "index":5,
+        "price":"$2,181.65",
+        "picture":"https://images.pexels.com/photos/2667694/pexels-photo-2667694.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "name":"Summer Beach Tropical"
+    }
+]

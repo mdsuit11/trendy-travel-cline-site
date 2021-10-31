@@ -1,0 +1,7 @@
+.main-container{
+    margin-top: 80px;
+}
+.main-container form input{
+   margin-top: 5px;
+   width: 50%;
+}

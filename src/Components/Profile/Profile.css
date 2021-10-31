@@ -1,0 +1,13 @@
+.rgs-from{
+    display: flex;
+    justify-content: center;
+}
+.registation-from{
+    padding-top: 30px;
+    align-items: center;
+    box-shadow: 10px 10px 10px 10px gray;
+    margin-top: 50px;
+    height: 500px;
+    width: 300px;
+    border-radius: 10px;
+}
