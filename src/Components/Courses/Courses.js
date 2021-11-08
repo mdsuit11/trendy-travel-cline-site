@@ -30,7 +30,9 @@ const Courses = () => {
                 {
                 course.map(cours=> <Course cours={cours}
                 key={cours._id}></Course>)
+
             }
+           
                 </div>
             
             

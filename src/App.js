@@ -13,8 +13,10 @@ import Thumsup from './Components/Thumsup/Thumsup';
 import AuthProvider from './context/AuthProvider';
 import PrivetRoute from './privateRoute/PrivetRoute';
 import Order from './Components/Order/Order';
-import Spachial from './Components/Spachial/Spachial';
 import SpachialService from './Components/SpachialService/SpachialService';
+import Orders from './Components/Orders/Orders';
+import MyOrder from './Components/MyOrder/MyOrder';
+import AddService from './Components/Addservice/Addservice';
 
 function App() {
   return (
@@ -26,15 +28,21 @@ function App() {
          <Route path="/home">
            <Home></Home>
          </Route>
-         {/* <Route path="/spachial">
-           <Spachial></Spachial>
-         </Route> */}
+         <PrivetRoute path='/addservice'>
+            <AddService></AddService>
+         </PrivetRoute>
          <Route path='/spachialservice'>
             <SpachialService></SpachialService>
          </Route>
          <Route path="/about">
            <About></About>
          </Route>
+         <PrivetRoute path="/orders">
+           <Orders></Orders>
+         </PrivetRoute>
+         <PrivetRoute path="/myorder">
+           <MyOrder></MyOrder>
+         </PrivetRoute>
          <Route path="/courses">
           <Courses></Courses>
          </Route>

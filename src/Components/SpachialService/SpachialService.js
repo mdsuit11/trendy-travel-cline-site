@@ -11,7 +11,6 @@ const SpachialService = () => {
     const {isLoding} = useAuth();
 
     useEffect( () => {
-        
         fetch('https://polar-brook-02820.herokuapp.com/spachial')
         .then(res => res.json())
         .then(data => setServices(data))

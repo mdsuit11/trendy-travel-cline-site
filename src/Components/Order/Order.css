@@ -1,8 +1,14 @@
-.main-container{
+.order-container{
     margin-top: 80px;
     margin-bottom: 50px;
 }
-.main-container form input{
-   margin-top: 5px;
-   width: 50%;
+.order-container div{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+   
+}
+.order-container form input, textarea{
+   margin-top: 20px;
+   width: 100%;
 }

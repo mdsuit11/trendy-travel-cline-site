@@ -1,3 +1,8 @@
-.footer-container img{
-    width: 100%;
+.footer-container{
+  background-color: #232F3E;
+  color: white;
+  padding: 30px 10px;
+}
+  .ul-container ul li{
+    list-style: none;
   }

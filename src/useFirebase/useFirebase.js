@@ -1,5 +1,6 @@
-import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, createUserWithEmailAndPassword , signOut  } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, createUserWithEmailAndPassword , signOut, getIdToken  } from "firebase/auth";
 import { useEffect, useState } from "react";
+import { useHistory } from "react-router";
 import initializeAuthentication from "../Firebase/firebase.init";
 
 initializeAuthentication();
@@ -17,20 +18,23 @@ const useFirebase = () => {
         const googleProvider = new GoogleAuthProvider();
        return signInWithPopup(auth, googleProvider)
     //    
-        // .then(result => {
-    //        setUser(result.user)
-    //    })
-    //    .finally(() => setIsLoding(false));
+        .then(result => {
+           setUser(result.user)
+       })
+       
         // .catch (error => {
         //    console.log(error.message);
         //    setError(error.message)
-        // });
-        
+        // })
+        // .finally(() => setIsLoding(false));
+       
     } 
 
     useEffect( () => {
-        onAuthStateChanged(auth, user=> {
+       const unsubscribe =  onAuthStateChanged(auth, user=> {
             if(user) {
+                getIdToken(user)
+                .then(idToken=> localStorage.setItem('idToken', idToken));
                 console.log(user);
                 setUser(user);
             }
@@ -39,6 +43,7 @@ const useFirebase = () => {
             }
             setIsLoding(false);
         })
+        return () => unsubscribe;
     }, []);
 
     const logOut = () => {
@@ -62,6 +67,7 @@ const useFirebase = () => {
         .catch(error => {
             setError(error.message)
         })
+       
 
     }
     const handleEmailCheng = e => {

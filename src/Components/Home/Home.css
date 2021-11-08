@@ -16,6 +16,10 @@
     grid-template-columns: repeat(4, 1fr);
     
 }
+.travel-post{
+    margin: 20px 15px;
+    text-align: left;
+}
 .last-container div{
     margin: 0px 30px;
 }

@@ -12,13 +12,14 @@ const Profile = () => {
     const handleSubmitFrom = e => {
         handleRegistation();
         histry.push(uri)
+        e.preventDefaSult();
         
     }
 
-        const handleGoogleSignUp = () => {
+        const handleGoogleSignUp = (location) => {
             SignInGoogle()
             
-            histry.push(uri)
+            histry.push(location)
             
         }
     return (
@@ -33,11 +34,11 @@ const Profile = () => {
              <br />
             <input onBlur={handlepasswordCheng} type="password" placeholder="type password"/> 
             <br />
-            <input type="checkbox" name="male" id="" /> Male 
-            <input type="checkbox" name="male" id="" /> Female <br /> <br />
+            {/* <input type="checkbox" name="male" id="" /> Male 
+            <input type="checkbox" name="male" id="" /> Female <br /> <br /> */}
                 <h3 className='text-danger'>{error} </h3>
 
-                <input className='btn btn-primary' type="submit" value="submit" />
+                <button className="btn btn-primary" type="submit">Submit</button>
 
            
             </form>

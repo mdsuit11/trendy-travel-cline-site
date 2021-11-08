@@ -6,6 +6,8 @@ import useAuth from '../../useFirebase/useAuth';
 
 const Header = () => {
   const {user, logOut} = useAuth();
+  console.log(user.photoURL);
+  console.log(user.displayName);
     return (
  
         <div className="mainheader-container">
@@ -20,9 +22,15 @@ const Header = () => {
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                   <li  className="nav-item">
                   <div className="company-name">
-            <h2 className="title">Trendy Travel</h2>
+                  
+            {
+              user.email && <h6> Hello</h6>
+            }
+           <h6>{user?.displayName}</h6>
+           <img src={user?.photoURL} alt="" />
           </div>
                   </li>
+                 
                   <li className="nav-item nav-titile">
                     <NavLink className="nav-link active" aria-current="page" to="/home">HOME</NavLink>
                   </li>
@@ -39,9 +47,21 @@ const Header = () => {
                   <NavLink className="nav-link active" aria-current="page" to="/About">About</NavLink>
                   
                   </li>
+                  <li className="nav-item nav-titile">
+                  <NavLink className="nav-link active" aria-current="page" to="/addservice">Add Service</NavLink>
+                  
+                  </li>
+
+                  {/* Conditonal format route  */}
+                  {
+                    user?.email && <li className="nav-item nav-titile">
+                    <NavLink className="nav-link active" aria-current="page" to="/myorder">My Orders</NavLink>
+                    
+                    </li>
+                  }
                   <li className="nav-item ">
                   {
-                  user?.email && <button  onClick={logOut} className='btn btn-primary'>Log Out</button>
+                  user?.email && <button  onClick={logOut} className='btn bg-black text-white btn-black'>Log Out</button>
                   }
                   
                   </li>
