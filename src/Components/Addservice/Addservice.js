@@ -17,17 +17,16 @@ const AddService = () => {
     })
   };
     return (
-        <div className='add-service mb-5 order-container'>
+        <div className='add-service mb-5 '>
              <h2>Please add a service</h2>
             <div>
            
-            <form onSubmit={handleSubmit(onSubmit)}>
-            <input {...register("name", { required: true, maxLength: 20 })} placeholder="name" />
-            {/* <input {...register("lastName", { pattern: /^[A-Za-z]+$/i })} /> */}
-            <input type="number" {...register("price")} placeholder='price' />
-            <textarea type="text" {...register("description")}cols="10" placeholder='description'></textarea>
-            <input {...register("img")} placeholder="img url" />
-            
+            <form onSubmit={handleSubmit(onSubmit)} className="mt-5">
+            <input style={{width: '20%'}} {...register("name", { required: true, maxLength: 20 })} placeholder="name" /> <br />
+            <input style={{width: '20%'}} type="number" {...register("price")} placeholder='price' /> <br />
+            <textarea style={{width: '20%'}} type="text" {...register("description")}cols="10" placeholder='description'></textarea> <br />
+            <input style={{width: '20%'}} {...register("img")} placeholder="img url" /> <br /> <br />
+             
             <input type="submit" />
     </form>
             </div>
