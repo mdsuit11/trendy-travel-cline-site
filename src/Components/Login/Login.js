@@ -37,7 +37,7 @@ const Login = () => {
            </form>
         
                 <p className='text-danger'>{error}</p>
-                <button className='btn btn-primary mt-3' onClick={handleGoogleLogin}>Google Sign In</button>
+                <button className='btn btn-primary mt-3' onClick={handleGoogleLogin}>Google Log In</button>
             <Link to="/profile">
             <p>creat an accoutn</p>
             </Link>
